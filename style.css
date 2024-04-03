@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+#contenedorPadre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el div padre (cuerpo de la página) */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura al 100% del viewport */
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    background-color: #f0f0f0; /* Color de fondo opcional */
+}
+
+/* Estilos para el div hijo */
+#contenedorHijo {
+    width: 300px; /* Ancho deseado del div hijo */
+    height: 200px; /* Alto deseado del div hijo */
+    background-color: #feb139; /* Color de fondo opcional */
+}
