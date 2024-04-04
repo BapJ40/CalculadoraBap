@@ -22,7 +22,17 @@ body {
 
 /* Estilos para el div hijo */
 #contenedorHijo {
-    width: 300px; /* Ancho deseado del div hijo */
-    height: 200px; /* Alto deseado del div hijo */
+    width: 350px; /* Ancho deseado del div hijo */
+    height: 400px; /* Alto deseado del div hijo */
     background-color: #feb139; /* Color de fondo opcional */
+    border-radius: 5%;
+}
+
+#pantallaNumeros{
+    position: absolute;
+    top: 240px;
+    width: 270px;
+    height: 50px;
+    background-color: black;
+    border-radius: 3%;
 }
