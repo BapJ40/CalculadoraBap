@@ -24,13 +24,22 @@ body {
     border-radius: 3%;
 }
 
-#pantallaNumeros{
+.pantallaNumeros{
     width: 450px;
     height: 100px;
     background-color: #D7E3FC;
     margin-top: 5%;
     margin-left: 5%;
     border-radius: 5%;
+}
+
+#numerosPantalla{
+    font-size: 3.3rem;
+    text-align: end;
+    margin-right: 8px;
+    margin-top: 10px;
+    color: white;
+    font-family: "Oswald", serif;
 }
 
 .grid-container{
