@@ -1,44 +1,73 @@
 * {
-    box-sizing: border-box;
+    box-sizing: content-box;
     margin: 0px;
     padding: 0px;
 }
 
-#contenedorPadre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Estilos para el div padre (cuerpo de la página) */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ajusta la altura al 100% del viewport */
-    margin: 0; /* Elimina el margen predeterminado del cuerpo */
-    background-color: #f0f0f0; /* Color de fondo opcional */
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; 
 }
 
-/* Estilos para el div hijo */
-#contenedorHijo {
-    width: 350px; /* Ancho deseado del div hijo */
-    height: 400px; /* Alto deseado del div hijo */
-    background-color: #abc4ff; /* Color de fondo opcional */
-    border-radius: 5%;
-}
-
-#pantallaNumeros{
-    position: absolute;
-    top: 240px;
-    width: 270px;
-    height: 50px;
-    background-color: #ccdbfd;
+#contenedorPadre{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 500px;
+    height: 550px;
+    background-color: #ABC4FF;
     border-radius: 3%;
 }
 
+#pantallaNumeros{
+    width: 450px;
+    height: 100px;
+    background-color: #D7E3FC;
+    margin-top: 5%;
+    margin-left: 5%;
+    border-radius: 5%;
+}
+
 .grid-container{
+    width: 450px;
+    height: 72%;
+    margin-top: 3%;
+    margin-left: 5%;
+    background-color: #B6CCFE;
+    border-radius: 3%;
+}
+
+.grid{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, auto);
+    gap: 3px;
+}
+
+.boton{
+    width: 90%;
+    height: 87px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 2px;
+    background-color: #EDF2FB;
+    border-color: #ABC4FF;
+}
+
+.cero{
+    grid-column: 1 / span 2;
+    margin-left: 3px;
+    padding: 0px 4px;
+    
+}
+
+.grande{
+    grid-column: 4 / span 2;
+    margin-right: 3px;
+    padding: 0px 4px;
 }
