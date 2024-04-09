@@ -10,7 +10,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0; 
+    background-color: #1c253ab2; 
 }
 
 #contenedorPadre{
@@ -34,14 +34,20 @@ body {
 }
 
 #numerosPantalla{
-    font-size: 3.3rem;
+    font-size: 3.5rem;
     text-align: end;
     margin-right: 8px;
-    margin-top: 10px;
+    margin-top: -7px;
     color: white;
     font-family: "Oswald", serif;
 }
-
+#numerosPantallaDos{
+    font-size: 1.5rem;
+    text-align: end;
+    margin-right: 8px;
+    color: black;
+    font-family: "Oswald", serif;
+}
 .grid-container{
     width: 450px;
     height: 72%;
