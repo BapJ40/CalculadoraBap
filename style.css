@@ -86,3 +86,13 @@ body {
     margin-right: 3px;
     padding: 0px 4px;
 }
+
+#clear{
+    grid-column: 4 / span 2;
+    margin-right: 3px;
+    padding: 0px 4px;
+}
+
+#botonPunto{
+    font-size: 2rem;
+}

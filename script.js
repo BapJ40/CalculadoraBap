@@ -2,6 +2,7 @@ const MAX_LENGTH = 16;
 let numeroActual = "";
 let primerValor;
 let contador = 0;
+let operacion = "";
 
 const boton1 = document.getElementById("boton1");
 const boton2 = document.getElementById("boton2");
@@ -17,6 +18,127 @@ const botonPunto = document.getElementById("botonPunto");
 const numerosPantalla = document.getElementById("numerosPantalla");
 const numerosPantallaDos = document.getElementById("numerosPantallaDos");
 const botonSuma = document.getElementById("suma");
+const BOTONresta = document.getElementById("resta");
+const BOTONMulti = document.getElementById("multi");
+const BOTONDivi = document.getElementById("divi");
+const BOTONClear = document.getElementById("clear");
+const BOTONIgual = document.getElementById("igual")
+
+function igual(){
+  switch(operacion){
+    case "suma":
+      segundoValor = Number(numeroActual)
+      resuSuma  = suma(primerValor, segundoValor)
+      numerosPantalla.innerHTML = resuSuma;
+      contador++;
+      break;
+    case "resta":
+      segundoValor = Number(numeroActual)
+      resuResta  = resta(primerValor, segundoValor)
+      numerosPantalla.innerHTML = resuResta;
+      contador++;
+      break;
+    case "multi":
+      segundoValor = Number(numeroActual)
+      resuMulti  = multi(primerValor, segundoValor)
+      numerosPantalla.innerHTML = resuMulti;
+      contador++
+      break;
+    case "divi":
+      segundoValor = Number(numeroActual)
+      resuDivi  = divi(primerValor, segundoValor)
+      numerosPantalla.innerHTML = resuDivi;
+      contador++
+      break;
+  }
+}
+
+BOTONIgual.addEventListener("click", igual)
+
+
+function clear(){
+  numeroActual = "";
+  primerValor = "";
+  segundoValor = "";
+  contador = 0;
+  numerosPantalla.innerHTML = numeroActual;
+  numerosPantallaDos.innerHTML = numeroActual;
+
+}
+
+BOTONClear.addEventListener("click", clear)
+
+function divi(primerValor, segundoValor){
+  return Number(primerValor) / Number(segundoValor)
+}
+
+BOTONDivi.addEventListener("click", function(){
+  function agreDivi(){
+    primerValor = Number(numeroActual);
+    numerosPantallaDos.innerHTML += " ÷ ";
+  }
+
+  if(contador === 0){
+    agreDivi()
+    numeroActual = "";
+    numerosPantalla.innerHTML = numeroActual;
+    operacion = "divi"
+  } else if (contador === 1) {
+    segundoValor = Number(numeroActual)
+    resuDivi  = divi(primerValor, segundoValor)
+    numerosPantalla.innerHTML = resuDivi;
+  }
+  
+  contador++
+});
+
+function multi(primerValor, segundoValor){
+  return Number(primerValor) * Number(segundoValor)
+}
+
+BOTONMulti.addEventListener("click", function(){
+  function agreMulti(){
+    primerValor = Number(numeroActual);
+    numerosPantallaDos.innerHTML += " * ";
+  }
+
+  if(contador === 0){
+    agreMulti()
+    numeroActual = "";
+    numerosPantalla.innerHTML = numeroActual;
+    operacion = "multi"
+  } else if (contador === 1) {
+    segundoValor = Number(numeroActual)
+    resuMulti  = multi(primerValor, segundoValor)
+    numerosPantalla.innerHTML = resuMulti;
+  }
+  
+  contador++
+});
+
+function resta(primerValor, segundoValor){
+  return Number(primerValor) - Number(segundoValor)
+}
+
+BOTONresta.addEventListener("click", function(){
+  function agreResta(){
+    primerValor = Number(numeroActual);
+    numerosPantallaDos.innerHTML += " - ";
+  }
+
+  if(contador === 0){
+    agreResta()
+    numeroActual = "";
+    numerosPantalla.innerHTML = numeroActual;
+    operacion = "resta"
+  } else if (contador === 1) {
+    segundoValor = Number(numeroActual)
+    resuResta  = resta(primerValor, segundoValor)
+    numerosPantalla.innerHTML = resuResta;
+  }
+  
+  contador++
+});
 
 function suma(primerValor, segundoValor){
   return Number(primerValor) + Number(segundoValor)
@@ -30,9 +152,9 @@ botonSuma.addEventListener("click", function(){
   
   if(contador === 0){
     agreSuma()
-    numeroActual = ""
+    numeroActual = "";
     numerosPantalla.innerHTML = numeroActual;
-
+    operacion = "suma"
   } else if (contador === 1) {
     segundoValor = Number(numeroActual)
     resuSuma  = suma(primerValor, segundoValor)
@@ -239,5 +361,3 @@ botonPunto.addEventListener("click", function() {
   }
   
 });
-
-console.log(numerosPantalla, numerosPantallaDos, primerValor)
